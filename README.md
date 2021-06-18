@@ -1,11 +1,25 @@
 SSON library
 ====
 
+Now, Serializer meet JSON, Call me SSON !
+
 Serializer와 JSON이 만났다! SSON 쏜!
 
-spring boot를 학습하며 한 번 작성해본 라이브러리
+spring boot를 학습하며 한 번 작성한 라이브러리
 
 # 1. 목표
+
+When developed the RestAPI service using Spring Framework, often necessary to respond to objects in JSON format.
+ 
+And there's always need some similar requirement. So I try to create an easy-to-use library to satisfy the requirements I need.
+
+There were many libraries that requirements I wanted.
+
+However, there was divided into several libraries, not one, and had to dependency various libraries.
+
+And the setting method is complicated or difficult for me to use, and makes the source code difficult to read.
+
+Those requirements are as written below.
 
 Spring framework에서 RestAPI서비스를 개발할 경우 Model 객체등을 JSON형식으로 반환하는 경우가 다반사였다.
 
