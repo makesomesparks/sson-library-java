@@ -7,7 +7,18 @@ Serializer¿Í JSONÀÌ ¸¸³µ´Ù! SSON ½ğ!
 
 spring boot¸¦ ÇĞ½ÀÇÏ¸ç ÇÑ ¹ø ÀÛ¼ºÇÑ ¶óÀÌºê·¯¸®
 
-# 1. ¸ñÇ¥
+# 1. ¸ñÇ¥ (Goal)
+
+Spring framework¿¡¼­ RestAPI¼­ºñ½º¸¦ ÀÛ¼ºÇÒ °æ¿ì Model °´Ã¼µîÀ» JSONÇü½ÄÀ¸·Î ¹İÈ¯ÇÏ´Â °æ¿ì°¡ ´Ù¹İ»ç¿´´Ù.
+
+±×·¯¸é¼­ ´Ù¾çÇÑ ¿ä±¸»çÇ×ÀÌ ÀÖ¾ú´Âµ¥ ±× ¿ä±¸»çÇ×À» ÃæÁ·ÇÏ´Â ¶óÀÌºê·¯¸®¸¦ ¸¸µé¾îº¸±â·Î Çß´Ù.
+
+»ç½Ç ÀÌ¿Í ÃæÁ·ÇÏ´Â ¶óÀÌºê·¯¸®µéÀÌ ¸¹¾ÒÁö¸¸, ÇÏ³ªÀÇ ¶óÀÌºê·¯¸®°¡ ¾Æ´Ñ ¿©·¯°¡Áö ¶óÀÌºê·¯¸®¸¦ ÀÇÁ¸ÇØ¾ß ÇßÀ¸¸ç, 
+
+¼³Á¤¹æ¹ıÀÌ ³»°¡ »ç¿ëÇÏ±â¿¡´Â º¹ÀâÇÏ°Å³ª ¾î·Æ°í, ¼Ò½ºÄÚµå¸¦ ÀĞ±â ¾î·Æ°Ô ¸¸µé¾î¹ö·È´Ù.
+
+±× ¿ä±¸»çÇ×µéÀº ¾Æ·¡¿Í °°¾Ò´Ù.
+
 
 When developed the RestAPI service using Spring Framework, often necessary to respond to objects in JSON format.
  
@@ -21,17 +32,8 @@ And the setting method is complicated or difficult for me to use, and makes the 
 
 Those requirements are as written below.
 
-Spring framework¿¡¼­ RestAPI¼­ºñ½º¸¦ °³¹ßÇÒ °æ¿ì Model °´Ã¼µîÀ» JSONÇü½ÄÀ¸·Î ¹İÈ¯ÇÏ´Â °æ¿ì°¡ ´Ù¹İ»ç¿´´Ù.
 
-±×·¯¸é¼­ ´Ù¾çÇÑ ¿ä±¸»çÇ×ÀÌ ÀÖ¾ú´Âµ¥ ±× ¿ä±¸»çÇ×À» ÃæÁ·ÇÏ´Â ¶óÀÌºê·¯¸®¸¦ ¸¸µé¾îº¸±â·Î Çß´Ù.
-
-»ç½Ç ÀÌ¿Í ÃæÁ·ÇÏ´Â ¶óÀÌºê·¯¸®µéÀÌ ¸¹¾ÒÁö¸¸, ÇÏ³ªÀÇ ¶óÀÌºê·¯¸®°¡ ¾Æ´Ñ ¿©·¯°¡Áö ¶óÀÌºê·¯¸®¸¦ ÀÇÁ¸ÇØ¾ß ÇßÀ¸¸ç, 
-
-¼³Á¤¹æ¹ıÀÌ ³»°¡ »ç¿ëÇÏ±â¿¡´Â º¹ÀâÇÏ°Å³ª ¾î·Æ°í, ¼Ò½ºÄÚµå¸¦ ÀĞ±â ¾î·Æ°Ô ¸¸µé¾î¹ö·È´Ù.
-
-±× ¿ä±¸»çÇ×µéÀº ¾Æ·¡¿Í °°¾Ò´Ù.
-
-# 1.1. Áß¿äÇÑ ¿ä±¸
+# 1.1. Áß¿äÇÑ ¿ä±¸ (Most important requirements)
 
 - ¼³Á¤ÆÄÀÏÀº ´ÜÀÏ properties ÇÏ³ª·Î ¸¸Á·ÇÑ´Ù
 
@@ -40,13 +42,26 @@ Spring framework¿¡¼­ RestAPI¼­ºñ½º¸¦ °³¹ßÇÒ °æ¿ì Model °´Ã¼µîÀ» JSONÇü½ÄÀ¸·Î ¹İÈ
 - SpringÀÇ Processor¿Í ¿¬µ¿ÇÏ±â ½±µµ·Ï ÇÑ´Ù
 
 
-# 1.2. Controller¿¡¼­ Model¿¡ ÆÄ¶ó¹ÌÅÍ °ª ¹ÙÀÎµù ¹Ş±â
+- Setting file is satisfied with only a single property file
+
+- Avoid dependency other JSON, Parser, etc. libraries
+
+- Easy to link with processor of Spring framework
+
+
+# 1.2. Controller¿¡¼­ Model¿¡ ÆÄ¶ó¹ÌÅÍ °ª ¹ÙÀÎµù ¹Ş±â (Get Model fields from request parameter values in Controller)
 
 - Request Parameter °ªÀ» ¹Ş¾Æ¿Ã¶§ ¾²ÀÏ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
 
 - Request ParameterÀÇ ÀÌ¸§°ú FieldÀÇ ÀÌ¸§ÀÌ ´Ù¸£°Ô ¼³Á¤µÇµµ·Ï ÇÑ´Ù.
 
-# 1.2. °´Ã¼¸¦ Json StringÀ¸·Î º¯È¯
+
+- Fields can get values in request parameter values.
+
+- Fields name can be set differently from Request parameter names
+
+
+# 1.2. °´Ã¼¸¦ Json StringÀ¸·Î º¯È¯ (Easy-to-convert objects to JSON String)
 
 - NullÀÏ °æ¿ì dispose ÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù
 
@@ -54,6 +69,16 @@ Spring framework¿¡¼­ RestAPI¼­ºñ½º¸¦ °³¹ßÇÒ °æ¿ì Model °´Ã¼µîÀ» JSONÇü½ÄÀ¸·Î ¹İÈ
   (°£È¤ returnÀº integer ÀÎµ¥ 1.0, 0.0, 10.0 °ú °°ÀÌ exposeµÇ¾î °ï¶õÇÒ¶§°¡ ¸¹¾Ò´Ù)
 
 - fieldÀÌ¸§°ú exposeÀÌ¸§À» ´Ù¸£°Ô ¼³Á¤ÇÒ ¼ö ÀÖ¾î¾ß ÇÑ´Ù.
+
+- °£È¤ ÀÇµµÇÏÁö ¾Ê°Ô ExceptionÀÌ »ı±â´Â °æ¿ì°¡ Á¾Á¾ ÀÖ´Ù. ±×·² °æ¿ì ¹«½ÃÇÏ°í ³Ñ¾î°¥ ¼ö ÀÖ´Â ¼³Á¤ÀÌ Æ÷ÇÔµÇ¾î¾ß ÇÑ´Ù.
+
+- If object is null, can be dispose.
+
+- If the field is a Primitive Number type, 
+Expose according to the type regardless of whether it is sine or unsine, such as integer, long, double, float, etc.
+(Sometimes, return type is Integer, but it is often problems to expose such as 1.0, 0.0,  10.0)
+
+- Sometimes, throws unintended exceptions. Some cases can ignore exception on custom settings
 
 # 1.3. ¼¼¼Ç¿¡ ¸ÂÃß¾î °£´ÜÇÏ°Ô »ç¿ë
 
