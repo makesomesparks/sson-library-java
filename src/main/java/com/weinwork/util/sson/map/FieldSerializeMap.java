@@ -1,7 +1,7 @@
 package com.weinwork.util.sson.map;
 
 import com.weinwork.util.sson.attribute.FieldSerialize;
-import com.weinwork.util.sson.rule.ExposeRule;
+import com.weinwork.util.sson.attribute.FieldSerialize.ExposeRule;
 
 import lombok.Getter;
 import lombok.Setter;

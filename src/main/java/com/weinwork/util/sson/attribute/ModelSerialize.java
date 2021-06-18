@@ -7,15 +7,18 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.weinwork.util.sson.rule.ExposeRule;
-import com.weinwork.util.sson.sson.SsonPropertiesReader;
-
 @Inherited
 @Documented
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ModelSerialize
 {
+	public static enum ExposeRule
+	{
+		ALWAYS, HIDE, ONLY_USER_UID, NOT_USER_UID, ONLY_ADMINISTRATOR
+	}
+	
 	ExposeRule exposeRule() default ExposeRule.ALWAYS;
+	
 	boolean disposeChildrenNull() default false;
 }

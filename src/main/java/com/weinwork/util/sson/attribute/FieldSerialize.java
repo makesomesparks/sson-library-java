@@ -7,25 +7,28 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.weinwork.util.sson.rule.ExposeRule;
-
 @Inherited
 @Documented
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface FieldSerialize
 {
+	public static enum ExposeRule
+	{
+		ALWAYS, HIDE, ONLY_USER_UID, NOT_USER_UID, ONLY_ADMINISTRATOR
+	}
+	
 	String paramName() default "";
-
+	
 	boolean paramRequired() default false;
-
+	
 	boolean paramIgnore() default false;
-
+	
 	boolean userUid() default false;
-	
-	String exposeName() default "";
-	
-	boolean disposeNull() default false;
 
+	String exposeName() default "";
+
+	boolean disposeNull() default false;
+	
 	ExposeRule exposeRule() default ExposeRule.ALWAYS;
 }

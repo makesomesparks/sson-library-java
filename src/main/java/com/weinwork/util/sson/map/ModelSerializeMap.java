@@ -1,8 +1,7 @@
 package com.weinwork.util.sson.map;
 
 import com.weinwork.util.sson.attribute.ModelSerialize;
-import com.weinwork.util.sson.rule.ExposeRule;
-import com.weinwork.util.sson.sson.SsonPropertiesReader;
+import com.weinwork.util.sson.attribute.ModelSerialize.ExposeRule;
 
 public class ModelSerializeMap
 {
