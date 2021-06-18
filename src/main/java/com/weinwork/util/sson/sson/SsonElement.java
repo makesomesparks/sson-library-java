@@ -116,11 +116,11 @@ public abstract class SsonElement
 	{
 		FieldSerializeMap map = this.fieldSerializeMap.get(fieldName);
 		
-		if (map == null || map.getSerializeName().isEmpty())
+		if (map == null || map.getExposeName().isEmpty())
 		{
 			return fieldName;
 		}
-		return map.getSerializeName();
+		return map.getExposeName();
 	}
 	
 	public String getUserUidAttribute()

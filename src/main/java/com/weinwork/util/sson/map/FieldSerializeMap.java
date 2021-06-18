@@ -11,7 +11,7 @@ import lombok.Setter;
 public class FieldSerializeMap
 {
 	String paramName;
-	String serializeName;
+	String exposeName;
 	boolean paramIgnore;
 	boolean paramRequired;
 	boolean userUidField;
@@ -21,7 +21,7 @@ public class FieldSerializeMap
 	public FieldSerializeMap()
 	{
 		this.paramName = "";
-		this.serializeName = "";
+		this.exposeName = "";
 		this.paramIgnore = false;
 		this.paramRequired = false;
 		this.userUidField = false;
@@ -34,9 +34,9 @@ public class FieldSerializeMap
 		if(fieldSerialize != null)
 		{
 			this.paramName = fieldSerialize.paramName();
-			this.serializeName = fieldSerialize.jsonName();
+			this.exposeName = fieldSerialize.exposeName();
 			this.paramIgnore = fieldSerialize.paramIgnore();
-			this.paramIgnore = fieldSerialize.paramRequired();
+			this.paramRequired = fieldSerialize.paramRequired();
 			this.exposeRule = fieldSerialize.exposeRule();
 			this.userUidField = fieldSerialize.userUid();
 			this.isDisposeNull = fieldSerialize.disposeNull();
@@ -44,7 +44,7 @@ public class FieldSerializeMap
 		else
 		{
 			this.paramName = "";
-			this.serializeName = "";
+			this.exposeName = "";
 			this.paramIgnore = false;
 			this.paramRequired = false;
 			this.userUidField = false;

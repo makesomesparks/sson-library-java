@@ -23,7 +23,7 @@ public @interface FieldSerialize
 
 	boolean userUid() default false;
 	
-	String jsonName() default "";
+	String exposeName() default "";
 	
 	boolean disposeNull() default false;
 
