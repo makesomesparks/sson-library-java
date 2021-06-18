@@ -1,21 +1,21 @@
 SSON library
 ====
 
-Serializer¿Í JSONÀÌ ¸¸³µ´Ù! SSON ½ğ!
+Serializerì™€ JSONì´ ë§Œë‚¬ë‹¤! SSON ìœ ğŸ¤£ 
 
-Now, Serializer meet JSON, Call me SSON !
+Now, Serializer meet JSON, Call me SSON[sË­on] ğŸ¤£
 
 # 1. Goal
 
-Spring framework¿¡¼­ RestAPI¼­ºñ½º¸¦ ÀÛ¼ºÇÒ °æ¿ì Model °´Ã¼µîÀ» JSONÇü½ÄÀ¸·Î ¹İÈ¯ÇÏ´Â °æ¿ì°¡ ´Ù¹İ»ç¿´´Ù.
+Spring frameworkì—ì„œ RestAPIì„œë¹„ìŠ¤ë¥¼ ì‘ì„±í•  ê²½ìš° Model ê°ì²´ë“±ì„ JSONí˜•ì‹ìœ¼ë¡œ ë°˜í™˜í•˜ëŠ” ê²½ìš°ê°€ ë‹¤ë°˜ì‚¬ì˜€ë‹¤.
 
-±×·¯¸é¼­ ´Ù¾çÇÑ ¿ä±¸»çÇ×ÀÌ ÀÖ¾ú´Âµ¥ ±× ¿ä±¸»çÇ×À» ÃæÁ·ÇÏ´Â ¶óÀÌºê·¯¸®¸¦ ¸¸µé¾îº¸±â·Î Çß´Ù.
+ê·¸ëŸ¬ë©´ì„œ ë‹¤ì–‘í•œ ìš”êµ¬ì‚¬í•­ì´ ìˆì—ˆëŠ”ë° ê·¸ ìš”êµ¬ì‚¬í•­ì„ ì¶©ì¡±í•˜ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ ë§Œë“¤ì–´ë³´ê¸°ë¡œ í–ˆë‹¤.
 
-»ç½Ç ÀÌ¿Í ÃæÁ·ÇÏ´Â ¶óÀÌºê·¯¸®µéÀÌ ¸¹¾ÒÁö¸¸, ÇÏ³ªÀÇ ¶óÀÌºê·¯¸®°¡ ¾Æ´Ñ ¿©·¯°¡Áö ¶óÀÌºê·¯¸®¸¦ ÀÇÁ¸ÇØ¾ß ÇßÀ¸¸ç, 
+ì‚¬ì‹¤ ì´ì™€ ì¶©ì¡±í•˜ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬ë“¤ì´ ë§ì•˜ì§€ë§Œ, í•˜ë‚˜ì˜ ë¼ì´ë¸ŒëŸ¬ë¦¬ê°€ ì•„ë‹Œ ì—¬ëŸ¬ê°€ì§€ ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ ì˜ì¡´í•´ì•¼ í–ˆìœ¼ë©°, 
 
-¼³Á¤¹æ¹ıÀÌ ³»°¡ »ç¿ëÇÏ±â¿¡´Â º¹ÀâÇÏ°Å³ª ¾î·Æ°í, ¼Ò½ºÄÚµå¸¦ ÀĞ±â ¾î·Æ°Ô ¸¸µé¾î¹ö·È´Ù.
+ì„¤ì •ë°©ë²•ì´ ë‚´ê°€ ì‚¬ìš©í•˜ê¸°ì—ëŠ” ë³µì¡í•˜ê±°ë‚˜ ì–´ë µê³ , ì†ŒìŠ¤ì½”ë“œë¥¼ ì½ê¸° ì–´ë µê²Œ ë§Œë“¤ì–´ë²„ë ¸ë‹¤.
 
-±× ¿ä±¸»çÇ×µéÀº ¾Æ·¡¿Í °°¾Ò´Ù.
+ê·¸ ìš”êµ¬ì‚¬í•­ë“¤ì€ ì•„ë˜ì™€ ê°™ì•˜ë‹¤.
 
 
 When developed the RestAPI service using Spring Framework, often necessary to respond to objects in JSON format.
@@ -33,11 +33,11 @@ Those requirements are as written below.
 
 # 1.1. Most important requirements
 
-1. ¼³Á¤ÆÄÀÏÀº ´ÜÀÏ properties ÇÏ³ª·Î ¸¸Á·ÇÑ´Ù
+1. ì„¤ì •íŒŒì¼ì€ ë‹¨ì¼ properties í•˜ë‚˜ë¡œ ë§Œì¡±í•œë‹¤
 
-2. ÃÖ´ëÇÑ ´Ù¸¥ JSON, ParserµîÀÇ ¶óÀÌºê·¯¸®¿¡ ÀÇÁ¸ÇÏÁö ¾Êµµ·Ï ÇÑ´Ù
+2. ìµœëŒ€í•œ ë‹¤ë¥¸ JSON, Parserë“±ì˜ ë¼ì´ë¸ŒëŸ¬ë¦¬ì— ì˜ì¡´í•˜ì§€ ì•Šë„ë¡ í•œë‹¤
 
-3. SpringÀÇ Processor¿Í ¿¬µ¿ÇÏ±â ½±µµ·Ï ÇÑ´Ù
+3. Springì˜ Processorì™€ ì—°ë™í•˜ê¸° ì‰½ë„ë¡ í•œë‹¤
 
 
 1. Setting file is satisfied with only a single property file
@@ -49,9 +49,9 @@ Those requirements are as written below.
 
 # 1.2. Bind values to fields from request parameter
 
-- Request Parameter °ªÀ» ¹Ş¾Æ¿Ã¶§ ¾²ÀÏ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+- Request Parameter ê°’ì„ ë°›ì•„ì˜¬ë•Œ ì“°ì¼ ìˆ˜ ìˆë„ë¡ í•œë‹¤.
 
-- Request ParameterÀÇ ÀÌ¸§°ú FieldÀÇ ÀÌ¸§ÀÌ ´Ù¸£°Ô ¼³Á¤µÇµµ·Ï ÇÑ´Ù.
+- Request Parameterì˜ ì´ë¦„ê³¼ Fieldì˜ ì´ë¦„ì´ ë‹¤ë¥´ê²Œ ì„¤ì •ë˜ë„ë¡ í•œë‹¤.
 
 
 - Fields can get values in request parameter values.
@@ -61,14 +61,14 @@ Those requirements are as written below.
 
 # 1.2. Easy-to-convert object to JSON String
 
-- NullÀÏ °æ¿ì dispose ÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù
+- Nullì¼ ê²½ìš° dispose í•  ìˆ˜ ìˆë„ë¡ í•œë‹¤
 
-- field°¡ Primitive Number Å¸ÀÔÀÇ °æ¿ì integer, long, double, floatµî sined, unsined »ó°ü¾øÀÌ type¿¡ ¸ÂÃß¾î exposeÇÑ´Ù.
-  (°£È¤ returnÀº integer ÀÎµ¥ 1.0, 0.0, 10.0 °ú °°ÀÌ exposeµÇ¾î °ï¶õÇÒ¶§°¡ ¸¹¾Ò´Ù)
+- fieldê°€ Primitive Number íƒ€ì…ì˜ ê²½ìš° integer, long, double, floatë“± sined, unsined ìƒê´€ì—†ì´ typeì— ë§ì¶”ì–´ exposeí•œë‹¤.
+  (ê°„í˜¹ returnì€ integer ì¸ë° 1.0, 0.0, 10.0 ê³¼ ê°™ì´ exposeë˜ì–´ ê³¤ë€í• ë•Œê°€ ë§ì•˜ë‹¤)
 
-- fieldÀÌ¸§°ú exposeÀÌ¸§À» ´Ù¸£°Ô ¼³Á¤ÇÒ ¼ö ÀÖ¾î¾ß ÇÑ´Ù.
+- fieldì´ë¦„ê³¼ exposeì´ë¦„ì„ ë‹¤ë¥´ê²Œ ì„¤ì •í•  ìˆ˜ ìˆì–´ì•¼ í•œë‹¤.
 
-- °£È¤ ÀÇµµÇÏÁö ¾Ê°Ô ExceptionÀÌ »ı±â´Â °æ¿ì°¡ Á¾Á¾ ÀÖ´Ù. ±×·² °æ¿ì ¹«½ÃÇÏ°í ³Ñ¾î°¥ ¼ö ÀÖ´Â ¼³Á¤ÀÌ Æ÷ÇÔµÇ¾î¾ß ÇÑ´Ù.
+- ê°„í˜¹ ì˜ë„í•˜ì§€ ì•Šê²Œ Exceptionì´ ìƒê¸°ëŠ” ê²½ìš°ê°€ ì¢…ì¢… ìˆë‹¤. ê·¸ëŸ´ ê²½ìš° ë¬´ì‹œí•˜ê³  ë„˜ì–´ê°ˆ ìˆ˜ ìˆëŠ” ì„¤ì •ì´ í¬í•¨ë˜ì–´ì•¼ í•œë‹¤.
 
 - If object is null, can be dispose.
 
@@ -78,19 +78,19 @@ Expose according to the type regardless of whether it is sine or unsine, such as
 
 - Sometimes, throws unintended exceptions. Some cases can ignore exception on custom settings
 
-# 1.3. ¼¼¼Ç¿¡ ¸ÂÃß¾î °£´ÜÇÏ°Ô »ç¿ë
+# 1.3. ì„¸ì…˜ì— ë§ì¶”ì–´ ê°„ë‹¨í•˜ê²Œ ì‚¬ìš©
 
-- expose ·êÀº »ç¿ëÀÚÀÇ ¼¼¼±¿¡ ¸ÂÃß¾î ÀÛµ¿ÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù. 
-  (¿¹: »ç¿ëÀÚÀÇ Á¤º¸¸¦ °¡Áø modelÀÇ °æ¿ì Æ¯Á¤ field°¡ dispose, ¼ÒÀ¯ÀÚ¸¸ expose µÇµµ·Ï°ü¸®ÀÚ¸¸ Ãâ·Â, ¶Ç´Â °ü¸®ÀÚ¸¸ º¸°Å³ª ¹«Á¶°Ç º¸ÀÌÁö ¾Ê°Ô etc..)
+- expose ë£°ì€ ì‚¬ìš©ìì˜ ì„¸ì„ ì— ë§ì¶”ì–´ ì‘ë™í•  ìˆ˜ ìˆë„ë¡ í•œë‹¤. 
+  (ì˜ˆ: ì‚¬ìš©ìì˜ ì •ë³´ë¥¼ ê°€ì§„ modelì˜ ê²½ìš° íŠ¹ì • fieldê°€ dispose, ì†Œìœ ìë§Œ expose ë˜ë„ë¡ê´€ë¦¬ìë§Œ ì¶œë ¥, ë˜ëŠ” ê´€ë¦¬ìë§Œ ë³´ê±°ë‚˜ ë¬´ì¡°ê±´ ë³´ì´ì§€ ì•Šê²Œ etc..)
 
 
-# 1.4. ½¬¿î Rule Àû¿ë
+# 1.4. ì‰¬ìš´ Rule ì ìš©
 
-- ¼Ò½ºÄÚµå¸¦ ´õ ÀÌ»ó Á¶ÀÛÇÏÁö¾Êµµ·Ï, ´Ü¼øÇÏ°Ô ModelÀÇ Annotation Ãß°¡·Î ÀÌ·ç¾îÁöµµ·Ï ÇÑ´Ù
+- ì†ŒìŠ¤ì½”ë“œë¥¼ ë” ì´ìƒ ì¡°ì‘í•˜ì§€ì•Šë„ë¡, ë‹¨ìˆœí•˜ê²Œ Modelì˜ Annotation ì¶”ê°€ë¡œ ì´ë£¨ì–´ì§€ë„ë¡ í•œë‹¤
 
-- @FIXME Á¶±İ ½¬ÀÚ ;;
+- @FIXME ì¡°ê¸ˆ ì‰¬ì ;;
 
-# 2. ÁøÇà»çÇ×
+# 2. ì§„í–‰ì‚¬í•­
 
 # 2.1 Annotation 
 
@@ -98,8 +98,8 @@ Expose according to the type regardless of whether it is sine or unsine, such as
 
 
 
-# 3. »ç¿ë¼³¸í
+# 3. ì‚¬ìš©ì„¤ëª…
 
-# 4. ÆĞÅ°Áöº° ¼³¸í
+# 4. íŒ¨í‚¤ì§€ë³„ ì„¤ëª…
 
-# 5. ±âÅ¸
+# 5. ê¸°íƒ€
