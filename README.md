@@ -1,13 +1,11 @@
 SSON library
 ====
 
-Now, Serializer meet JSON, Call me SSON !
-
 Serializer와 JSON이 만났다! SSON 쏜!
 
-spring boot를 학습하며 한 번 작성한 라이브러리
+Now, Serializer meet JSON, Call me SSON !
 
-# 1. 목표 (Goal)
+# 1. Goal
 
 Spring framework에서 RestAPI서비스를 작성할 경우 Model 객체등을 JSON형식으로 반환하는 경우가 다반사였다.
 
@@ -33,23 +31,23 @@ And the setting method is complicated or difficult for me to use, and makes the 
 Those requirements are as written below.
 
 
-# 1.1. 중요한 요구 (Most important requirements)
+# 1.1. Most important requirements
 
-- 설정파일은 단일 properties 하나로 만족한다
+1. 설정파일은 단일 properties 하나로 만족한다
 
-- 최대한 다른 JSON, Parser등의 라이브러리에 의존하지 않도록 한다
+2. 최대한 다른 JSON, Parser등의 라이브러리에 의존하지 않도록 한다
 
-- Spring의 Processor와 연동하기 쉽도록 한다
-
-
-- Setting file is satisfied with only a single property file
-
-- Avoid dependency other JSON, Parser, etc. libraries
-
-- Easy to link with processor of Spring framework
+3. Spring의 Processor와 연동하기 쉽도록 한다
 
 
-# 1.2. Controller에서 Model에 파라미터 값 바인딩 받기 (Get Model fields from request parameter values in Controller)
+1. Setting file is satisfied with only a single property file
+
+2. Avoid dependency other JSON, Parser, etc. libraries
+
+3. Easy to link with processor of Spring framework
+
+
+# 1.2. Bind values to fields from request parameter
 
 - Request Parameter 값을 받아올때 쓰일 수 있도록 한다.
 
@@ -61,7 +59,7 @@ Those requirements are as written below.
 - Fields name can be set differently from Request parameter names
 
 
-# 1.2. 객체를 Json String으로 변환 (Easy-to-convert objects to JSON String)
+# 1.2. Easy-to-convert object to JSON String
 
 - Null일 경우 dispose 할 수 있도록 한다
 
@@ -90,7 +88,7 @@ Expose according to the type regardless of whether it is sine or unsine, such as
 
 - 소스코드를 더 이상 조작하지않도록, 단순하게 Model의 Annotation 추가로 이루어지도록 한다
 
-
+- @FIXME 조금 쉬자 ;;
 
 # 2. 진행사항
 
